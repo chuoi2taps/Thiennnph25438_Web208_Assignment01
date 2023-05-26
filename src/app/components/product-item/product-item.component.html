@@ -1,0 +1,6 @@
+<td>{{index + 1}}</td>
+<td>{{product.name}}</td>
+<td>{{product.price}}</td>
+<td><button class="btn btn-danger mx-2" (click)="deleteItem(product.id)">Xoa</button>
+    <a routerLink="{{product.id}}/edit" (click)="updateItem(product.id)" class="btn btn-warning">Sua</a>
+</td>

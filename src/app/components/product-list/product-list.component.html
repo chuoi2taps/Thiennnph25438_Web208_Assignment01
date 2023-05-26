@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Quan ly san pham</h1>
+
+    <a routerLink="add" class="btn btn-secondary">Them san pham</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+            app-product-item
+            *ngFor="let product of products; let i = index"
+            [product] = "product"
+            [index] = "i"
+            (onRemove) = "deleteItem($event)"
+            >
+
+            </tr>
+        </tbody>
+    </table>
+</div>
